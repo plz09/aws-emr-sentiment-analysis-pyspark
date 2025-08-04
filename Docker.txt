@@ -1,0 +1,9 @@
+docker build -t plz-terraform-image:st .
+
+  docker run -dit --name plz-st `
+  -v C:/Users/pellizzi/Documents/projetos_iac/aws-emr-sentiment-analysis-pyspark/IaC:/iac `
+  -v C:/Users/pellizzi/Documents/projetos_iac/aws-emr-sentiment-analysis-pyspark/.env:/iac/.env `
+  plz-terraform-image:st bash
+
+terraform version
+aws --version

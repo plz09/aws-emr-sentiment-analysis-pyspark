@@ -1,2 +1,11 @@
-IaC/dados/dataset.csv
-IaC/.terraform/
+# .gitignore
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.DS_Store
+.terraform.lock.hcl
+IaC/.terraform
+Iac/dados/dataset.csv
