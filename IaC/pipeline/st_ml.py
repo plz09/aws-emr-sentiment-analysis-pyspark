@@ -133,9 +133,9 @@ def plz_cria_modelos_ml(spark, HTFfeaturizedData, TFIDFfeaturizedData, W2Vfeatur
 
         # Loop pela lista de classificadores
         for classifier in classifiers:
-            
+
             # Cria objeto da classe
-            new_result = plzTreinaAvaliaModelo(spark,
+            new_result = PLZTreinaAvaliaModelo(spark,
                                                classifier,
                                                features,
                                                classes,
