@@ -7,9 +7,9 @@ import boto3
 import traceback
 import pyspark 
 from pyspark.sql import SparkSession
-from IaC.pipeline.st_log import plz_grava_log
-from IaC.pipeline.st_processamento import plz_limpa_transforma_dados
-from IaC.pipeline.st_ml import plz_cria_modelos_ml
+from st_log import plz_grava_log
+from st_processamento import plz_limpa_transforma_dados
+from st_ml import plz_cria_modelos_ml
 
 
 # Nome do Bucket

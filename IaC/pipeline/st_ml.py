@@ -18,8 +18,8 @@ from pyspark.ml.evaluation import *
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.ml.feature import StopWordsRemover
 from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
-from IaC.pipeline.st_log import plz_grava_log
-from IaC.pipeline.st_upload_s3 import plz_upload_modelos_ml_bucket
+from st_log import plz_grava_log
+from st_upload_s3 import plz_upload_modelos_ml_bucket
 
 # Classe para treinar e avaliar o modelo
 def PLZTreinaAvaliaModelo(spark, classifier, features, classes, train, test, bucket, nome_bucket, ambiente_execucao_EMR):
