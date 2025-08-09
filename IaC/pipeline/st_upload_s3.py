@@ -4,7 +4,7 @@
 # Imports
 import os
 import os.path
-from IaC.pipeline.st_log import plz_grava_log
+from st_log import plz_grava_log
 
 # Define uma função para carregar um diretório no formato parquet para um bucket S3
 def plz_upload_dados_processados_bucket(df, path, s3_path, bucket, ambiente_execucao_EMR):

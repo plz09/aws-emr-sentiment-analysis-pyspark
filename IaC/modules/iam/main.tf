@@ -53,6 +53,30 @@ resource "aws_iam_role" "iam_emr_profile_role" {
 EOF
 }
 
+# IAM Role Policy para acesso ao S3
+resource "aws_iam_role_policy" "emr_s3_access" {
+  name = "emr_s3_access"
+  role = aws_iam_role.iam_emr_profile_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:ListBucket"
+        ]
+        Resource = [
+          "arn:aws:s3:::plz-st-914156456046",
+          "arn:aws:s3:::plz-st-914156456046/*"
+        ]
+      }
+    ]
+  })
+}
+
 # Profile
 resource "aws_iam_instance_profile" "emr_profile" {
   name = "emr_profile"

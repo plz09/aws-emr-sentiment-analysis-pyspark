@@ -103,7 +103,7 @@ resource "aws_emr_cluster" "cluster" {
     {
     "Classification": "spark-defaults",
       "Properties": {
-      "spark.pyspark.python": "/home/hadoop/conda/bin/python",
+      "spark.pyspark.python": "/usr/bin/python3",
       "spark.dynamicAllocation.enabled": "true",
       "spark.network.timeout":"800s",
       "spark.executor.heartbeatInterval":"60s"
