@@ -17,7 +17,7 @@ terraform {
   backend "s3" {
     encrypt = true
     # Este bucket deve ser criado manualmente
-    bucket  = "plz-st-terraform-914156456046"
+    bucket  = "plz-st-terraform-914156456046-new"
     key     = "plz-st.tfstate"
     region  = "us-east-2"
   }
